@@ -11,12 +11,12 @@
 </template>
 
 <script lang="ts" setup>
-import { language } from '@/hooks/language'
+import { language } from '@/types'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 function toggle(value: language): void {
-  document.cookie = `locale=${value}`
+  localStorage.setItem('locale', value)
   locale.value = value // 不刷新页面重新设置语言
 }
 </script>

@@ -22,3 +22,8 @@ export interface SidebarGroup {
     path: string
   }[]
 }
+
+export enum language {
+  简体中文 = 'zh',
+  English = 'en'
+}
